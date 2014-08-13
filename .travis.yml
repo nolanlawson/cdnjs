@@ -25,6 +25,7 @@ install: true
 #  - npm install --production --loglevel warn
 
 before_script:
+  - 'echo $TRAVIS_BRANCH; exit 1;'
   - 'if [ `pwd` != "/home/travis/build/cdnjs/cdnjs" ]; then exit 1; fi'
   - "gem --version"
   - "gem install --local .travis/multipart-post-1.2.0.gem --no-document > /dev/null"
